@@ -33,4 +33,14 @@ public class Box {
     public ListSweets getAllSweets(){
         return list;
     }
+
+    public void sortWeigh(){
+        list.sortWeigh();
+    }
+
+    public void sortAmount(){
+        list.sortAmount();
+    }
+
+
 }

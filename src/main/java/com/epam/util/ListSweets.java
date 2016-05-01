@@ -48,6 +48,30 @@ public class ListSweets {
         return list.length;
     }
 
+    public void sortWeigh(){
+        for (int j = list.length - 1; j > 0; j--) {
+            for (int i = 0; i < list.length - 1; i++) {
+                if (list[i].getWeigh() > list[i + 1].getWeigh()) {
+                    Sweets result = list[i];
+                    list[i] = list[i + 1];
+                    list[i + 1] = result;
+                }
+            }
+        }
+    }
+
+    public void sortAmount(){
+        for (int j = list.length - 1; j > 0; j--) {
+            for (int i = 0; i < list.length - 1; i++) {
+                if (list[i].getAmount() > list[i + 1].getAmount()) {
+                    Sweets result = list[i];
+                    list[i] = list[i + 1];
+                    list[i + 1] = result;
+                }
+            }
+        }
+    }
+
     public double getWeigh() {
         double weigh = 0;
         if (list != null) {
